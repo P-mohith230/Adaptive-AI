@@ -65,9 +65,40 @@ def create_app() -> FastAPI:
     )
 
     # ── CORS ─────────────────────────────────────────
+    raw_origins = settings.CORS_ORIGINS
+    origins = []
+    
+    if isinstance(raw_origins, list):
+        for origin in raw_origins:
+            if isinstance(origin, str):
+                origins.append(origin.strip())
+    elif isinstance(raw_origins, str):
+        raw_origins = raw_origins.strip()
+        if raw_origins.startswith("[") and raw_origins.endswith("]"):
+            try:
+                import json
+                parsed = json.loads(raw_origins)
+                if isinstance(parsed, list):
+                    origins.extend([str(o).strip() for o in parsed])
+            except Exception:
+                pass
+        if not origins:
+            origins = [o.strip() for o in raw_origins.split(",") if o.strip()]
+            
+    # Always guarantee production and local development origins are included
+    fallback_origins = [
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "http://127.0.0.1:3000",
+        "https://frontend-production-b552.up.railway.app"
+    ]
+    for fo in fallback_origins:
+        if fo not in origins:
+            origins.append(fo)
+
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.CORS_ORIGINS,
+        allow_origins=origins,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
