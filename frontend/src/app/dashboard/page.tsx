@@ -227,7 +227,7 @@ function OverviewTab({ orgData, dashboardData, latestRecommendation, alerts, onU
     setScraping(true);
     setMessage('Scraping website and analyzing operational stack via agents...');
     try {
-      const scraperService = (await import('@/lib/api/client')).orgAPI;
+      const scraperService = (await import('../../lib/api/client')).orgAPI;
       // In Next.js client request
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/v1'}/organizations/${orgData.organization_id}/scrape`, {
         method: 'POST',
