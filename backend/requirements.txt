@@ -1,0 +1,29 @@
+# AdaptiveAI Backend Dependencies
+# =================================
+
+# ── Core Framework ───────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# ── XLS Storage Layer ────────────────
+pandas==2.2.3
+openpyxl==3.1.5
+gspread==6.1.2
+google-auth==2.30.0
+
+# ── Authentication ───────────────────
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.1
+python-multipart==0.0.20
+
+# ── AI Providers (Groq + OpenRouter via OpenAI-compatible SDK) ──
+openai==1.59.4
+
+# ── HTTP & Async ─────────────────────
+httpx==0.28.1
+
+# ── Web Scraping ─────────────────────
+beautifulsoup4==4.12.3
+lxml==5.3.0
