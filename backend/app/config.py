@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     # ── Server ───────────────────────────────────────────
     HOST: str = "0.0.0.0"
     PORT: int = 8000
-    CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://127.0.0.1:3000", "https://frontend-production-b552.up.railway.app"]
 
     # ── Storage ──────────────────────────────────────────
     # Switch this to "sql" for PostgreSQL or "google_sheets" for live cloud database

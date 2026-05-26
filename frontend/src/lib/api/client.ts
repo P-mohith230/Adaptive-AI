@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://adaptive-ai-2o8i.onrender.com/api/v1';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://backend-production-8caff.up.railway.app/api/v1';
 
 interface RequestOptions {
   method?: string;
