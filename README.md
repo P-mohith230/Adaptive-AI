@@ -670,7 +670,7 @@ We welcome community contributions! Please review our development pipeline:
 This project is licensed under the terms of the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](file:///m:/Bytehearts/adaptiveai/LICENSE).
 
 * **Usage Limitations:** You are free to view, download, modify, and run this application for academic, personal, or learning purposes. Commercial redistribution or usage of this codebase is strictly prohibited without explicit written permission from the author.
-* **Credits:** AdaptiveAI was developed by **PAGADALA MOHITH** for the **ByteHearts × Ranovex AI Product Hackathon 2026**.
+* **Credits:** AdaptiveAI was developed by **PAGADALA MOHITH** & **S.NIKHIL REDDY** for the **ByteHearts × Ranovex AI Product Hackathon 2026**.
 
 ---
 
