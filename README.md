@@ -149,7 +149,7 @@ sequenceDiagram
 
 ---
 
-### 3. Dual-Layer Storage & Sync Flow (New)
+### 3. Dual-Layer Storage & Sync Flow
 To achieve industrial-grade reliability, AdaptiveAI uses a live Cloud-Local Hybrid storage model. Google Sheets acts as a serverless cloud DB, backed by a local Excel offline database with automatic fallback and state recovery.
 
 ```mermaid
