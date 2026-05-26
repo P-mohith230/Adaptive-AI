@@ -15,7 +15,7 @@
 
 <p align="center">
   Developed for the <strong>ByteHearts × Ranovex AI Product Hackathon 2026</strong><br/>
-  Designed & Engineered by <strong>PAGADALA MOHITH</strong>
+  Designed & Engineered by <strong>PAGADALA MOHITH ans S.NIKHIL REDDY</strong>
 </p>
 
 ---
