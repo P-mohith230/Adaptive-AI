@@ -229,7 +229,7 @@ function OverviewTab({ orgData, dashboardData, latestRecommendation, alerts, onU
     try {
       const scraperService = (await import('../../lib/api/client')).orgAPI;
       // In Next.js client request
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/v1'}/organizations/${orgData.organization_id}/scrape`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://adaptive-ai-2o8i.onrender.com/api/v1'}/organizations/${orgData.organization_id}/scrape`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(localStorage.getItem('adaptiveai_token') ? { Authorization: `Bearer ${localStorage.getItem('adaptiveai_token')}` } : {}) },
         body: JSON.stringify({ url })
