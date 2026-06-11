@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey?style=for-the-badge" alt="License">
 </p>
 
-<h1 align="center">🧠 AdaptiveAI</h1>
+<h1 align="center">AdaptiveAI</h1>
 <p align="center"><strong>AI-Native Operational Intelligence Platform for Startups</strong></p>
 
 <p align="center">
