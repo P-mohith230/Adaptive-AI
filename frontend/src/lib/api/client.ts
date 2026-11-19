@@ -5,7 +5,8 @@ function getApiBase(): string {
   if (typeof window !== 'undefined') {
     const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     if (!isLocal) {
-      return 'https://backend-production-8caff.up.railway.app/api/v1';
+      // On Vercel: use relative path so frontend and serverless FastAPI share the exact same domain
+      return '/api/v1';
     }
   }
   return 'http://localhost:8000/api/v1';

@@ -3,6 +3,29 @@
   "framework": "nextjs",
   "installCommand": "node -e \"if(require('fs').existsSync('frontend'))process.chdir('frontend');require('child_process').execSync('npm install',{stdio:'inherit'});\"",
   "buildCommand": "node -e \"if(require('fs').existsSync('frontend'))process.chdir('frontend');require('child_process').execSync('npm run build',{stdio:'inherit'});\"",
+  "outputDirectory": "frontend/.next",
+  "rewrites": [
+    {
+      "source": "/api/v1/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/docs",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/openapi.json",
+      "destination": "/api/index.py"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

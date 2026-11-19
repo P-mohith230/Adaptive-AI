@@ -69,7 +69,26 @@ class Settings(BaseSettings):
 
     @property
     def data_dir(self) -> Path:
-        """Ensure data directory exists and return path."""
+        """Ensure data directory exists and return path. On Vercel, uses writable /tmp directory."""
+        import os
+        import tempfile
+        import shutil
+
+        if os.environ.get("VERCEL") == "1":
+            target = Path(tempfile.gettempdir()) / "adaptiveai_data"
+            target.mkdir(parents=True, exist_ok=True)
+            # Copy pre-existing excel sheets from bundle to /tmp if not already there
+            source_dir = Path(__file__).resolve().parent.parent / "data"
+            if source_dir.exists():
+                for f in source_dir.glob("*.xlsx"):
+                    dest_f = target / f.name
+                    if not dest_f.exists():
+                        try:
+                            shutil.copy2(f, dest_f)
+                        except Exception:
+                            pass
+            return target
+
         self.DATA_DIR.mkdir(parents=True, exist_ok=True)
         return self.DATA_DIR
 
