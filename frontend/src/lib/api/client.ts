@@ -1,4 +1,17 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://backend-production-8caff.up.railway.app/api/v1';
+function getApiBase(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL;
+  }
+  if (typeof window !== 'undefined') {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (!isLocal) {
+      return 'https://backend-production-8caff.up.railway.app/api/v1';
+    }
+  }
+  return 'http://localhost:8000/api/v1';
+}
+
+const API_BASE = getApiBase();
 
 interface RequestOptions {
   method?: string;

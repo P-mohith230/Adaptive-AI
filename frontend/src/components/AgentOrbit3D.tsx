@@ -10,12 +10,12 @@ import { Loader2 } from 'lucide-react';
    AGENT DEFINITIONS — positions in orbital layout
    ═══════════════════════════════════════════════════════ */
 const AGENT_DEFS = [
-  { id: 'workflow',  color: '#00E5A8', angle: 0 },
+  { id: 'workflow',  color: '#10A37F', angle: 0 },
   { id: 'research',  color: '#3B82F6', angle: Math.PI / 3 },
   { id: 'sentiment', color: '#F59E0B', angle: (2 * Math.PI) / 3 },
   { id: 'trend',     color: '#22C55E', angle: Math.PI },
-  { id: 'roi',       color: '#EF4444', angle: (4 * Math.PI) / 3 },
-  { id: 'strategy',  color: '#D946EF', angle: (5 * Math.PI) / 3 },
+  { id: 'roi',       color: '#00E5A8', angle: (4 * Math.PI) / 3 },
+  { id: 'strategy',  color: '#38BDF8', angle: (5 * Math.PI) / 3 },
 ];
 
 const ORBIT_RADIUS = 2.8;
@@ -49,8 +49,8 @@ function OrchestratorCore() {
       <mesh ref={coreRef}>
         <icosahedronGeometry args={[0.35, 2]} />
         <meshStandardMaterial
-          color="#8B5CF6"
-          emissive="#8B5CF6"
+          color="#10A37F"
+          emissive="#10A37F"
           emissiveIntensity={2.5}
           toneMapped={false}
           wireframe
@@ -61,8 +61,8 @@ function OrchestratorCore() {
       <mesh>
         <icosahedronGeometry args={[0.25, 1]} />
         <meshStandardMaterial
-          color="#7C3AED"
-          emissive="#7C3AED"
+          color="#059669"
+          emissive="#059669"
           emissiveIntensity={4}
           toneMapped={false}
         />
@@ -72,7 +72,7 @@ function OrchestratorCore() {
       <mesh ref={glowRef}>
         <sphereGeometry args={[0.55, 16, 16]} />
         <meshBasicMaterial
-          color="#8B5CF6"
+          color="#10A37F"
           transparent
           opacity={0.08}
         />
@@ -81,7 +81,7 @@ function OrchestratorCore() {
       {/* Orbital ring */}
       <mesh ref={ringRef}>
         <torusGeometry args={[0.5, 0.012, 8, 64]} />
-        <meshBasicMaterial color="#8B5CF6" transparent opacity={0.4} />
+        <meshBasicMaterial color="#10A37F" transparent opacity={0.4} />
       </mesh>
     </group>
   );

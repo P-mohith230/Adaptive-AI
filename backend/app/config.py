@@ -79,7 +79,7 @@ class Settings(BaseSettings):
         return bool(self.GROQ_API_KEY or self.OPENROUTER_API_KEY)
 
     model_config = {
-        "env_file": ".env",
+        "env_file": str(Path(__file__).resolve().parent.parent / ".env"),
         "env_file_encoding": "utf-8",
         "case_sensitive": True,
         "extra": "ignore",

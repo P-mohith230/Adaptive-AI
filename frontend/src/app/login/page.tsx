@@ -37,12 +37,10 @@ export default function LoginPage() {
     team_size: 10,
   });
 
-  // Redirect if already authenticated
+  // Direct redirect to dashboard (Login bypassed)
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push('/dashboard');
-    }
-  }, [isAuthenticated, router]);
+    router.replace('/dashboard');
+  }, [router]);
 
   // Fetch registered organizations
   useEffect(() => {

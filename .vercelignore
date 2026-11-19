@@ -1,0 +1,10 @@
+# Ignore heavy backend and documentation directories for Vercel Frontend deployment
+backend/
+assets/
+Documents/
+*.pptx
+*.xlsx
+.git
+.env
+.env.local
+node_modules/

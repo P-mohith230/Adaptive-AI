@@ -58,7 +58,7 @@ Our differentiator lies in three key elements:
 
 ---
 
-## 🤖 AI Integration Used
+### 🤖 AI Integration Used
 *AI integration details (1060 / 1500 characters)*
 
 AdaptiveAI features a proprietary **Multi-Agent Collaborative Pipeline** optimized for high-speed, structured reasoning:

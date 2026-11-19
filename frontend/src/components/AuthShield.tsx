@@ -17,40 +17,9 @@ export default function AuthShield({ children }: { children: React.ReactNode }) 
   const [checking, setChecking] = useState(true);
 
   useEffect(() => {
-    const verifySession = async () => {
-      const token = localStorage.getItem('adaptiveai_token');
-      const isProtectedRoute = PROTECTED_ROUTES.some(route => pathname.startsWith(route));
-      const isPublicOnlyRoute = PUBLIC_ONLY_ROUTES.some(route => pathname.startsWith(route));
-
-      // 1. If we have a local token but store is not authenticated, sync session first
-      if (token && !isAuthenticated) {
-        try {
-          const profile = await authAPI.getMe();
-          setAuth(profile, token);
-        } catch (err) {
-          console.error('Session sync failed:', err);
-          logout();
-          if (isProtectedRoute) {
-            router.push('/login');
-          }
-        }
-      }
-
-      // Re-read authenticated state after sync check
-      const authed = !!token || isAuthenticated;
-
-      // 2. Perform path security routing
-      if (isProtectedRoute && !authed) {
-        router.push('/login');
-      } else if (isPublicOnlyRoute && authed) {
-        router.push('/dashboard');
-      } else {
-        setChecking(false);
-      }
-    };
-
-    verifySession();
-  }, [pathname, isAuthenticated, router, setAuth, logout]);
+    // Direct access allowed without mandatory login check
+    setChecking(false);
+  }, []);
 
   if (checking) {
     return (
