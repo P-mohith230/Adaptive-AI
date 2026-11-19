@@ -1,9 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/.next",
-  "installCommand": "cd frontend && npm install",
+  "installCommand": "node -e \"if(require('fs').existsSync('frontend'))process.chdir('frontend');require('child_process').execSync('npm install',{stdio:'inherit'});\"",
+  "buildCommand": "node -e \"if(require('fs').existsSync('frontend'))process.chdir('frontend');require('child_process').execSync('npm run build',{stdio:'inherit'});\"",
   "headers": [
     {
       "source": "/(.*)",
