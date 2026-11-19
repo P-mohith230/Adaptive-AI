@@ -90,7 +90,8 @@ def create_app() -> FastAPI:
         "http://localhost:3000",
         "http://localhost:3001",
         "http://127.0.0.1:3000",
-        "https://frontend-production-b552.up.railway.app"
+        "https://frontend-production-b552.up.railway.app",
+        "https://adaptive-startups-ai.vercel.app"
     ]
     for fo in fallback_origins:
         if fo not in origins:

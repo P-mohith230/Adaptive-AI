@@ -2,7 +2,8 @@
 
 <p align="center">
   <strong>AI-Native Organizational Intelligence for Startups</strong><br/>
-  Turn AI chaos into clear, ROI-driven execution.
+  Turn AI chaos into clear, ROI-driven execution.<br/>
+  <a href="https://adaptive-startups-ai.vercel.app/"><strong>🌐 Live Application: https://adaptive-startups-ai.vercel.app/</strong></a>
 </p>
 
 <p align="center">

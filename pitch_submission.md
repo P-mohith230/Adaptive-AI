@@ -1,5 +1,8 @@
 # AdaptiveAI — Pitch Submission & Project Story
 
+> **Live System:** [https://adaptive-startups-ai.vercel.app/](https://adaptive-startups-ai.vercel.app/)  
+> **GitHub Repository:** [https://github.com/P-mohith230/Adaptive-AI](https://github.com/P-mohith230/Adaptive-AI)
+
 This document contains highly humanized, professional, and simply understandable copy for your incubator, hackathon, or investor pitch submission. It clearly defines the gap AdaptiveAI closes and why it represents the future of AI-driven business transformation.
 
 ---

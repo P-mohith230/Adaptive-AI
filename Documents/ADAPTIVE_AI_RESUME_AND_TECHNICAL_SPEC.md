@@ -1,7 +1,7 @@
 # AdaptiveAI — Executive Technical Blueprint & Quantifiable Impact Dossier
 > **Author & Architect:** P. Mohith  
 > **Repository:** [https://github.com/P-mohith230/Adaptive-AI](https://github.com/P-mohith230/Adaptive-AI)  
-> **Live Production System:** [https://adaptiveai.vercel.app](https://adaptiveai.vercel.app) *(or your deployed Vercel URL)*  
+> **Live Production System:** [https://adaptive-startups-ai.vercel.app/](https://adaptive-startups-ai.vercel.app/)  
 > **Target Audience for this Document:** Advanced LLMs (Claude 3.7/Sonnet, GPT-4o), Technical Recruiters, Fractional CFOs, and Engineering Hiring Committees.
 
 ---
@@ -202,5 +202,5 @@ Craft:
 1. A punchy, 3-line Senior/Lead Full-Stack AI Engineer resume summary.
 2. 5 high-impact, quantified resume bullet points in STAR format (Situation, Task, Action, Result) highlighting multi-agent orchestration, deterministic financial math, 3D WebGL optimization, and serverless monorepo cloud architecture.
 3. A technical project summary suitable for an engineering portfolio or GitHub README.
-Include the GitHub repository link: https://github.com/P-mohith230/Adaptive-AI and live demo link."
+Include the GitHub repository link: https://github.com/P-mohith230/Adaptive-AI and live demo link: https://adaptive-startups-ai.vercel.app/"
 ```
